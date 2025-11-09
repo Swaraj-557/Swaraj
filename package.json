@@ -1,0 +1,31 @@
+{
+  "name": "swaraj-ai",
+  "version": "1.0.0",
+  "description": "Voice-based AI assistant with Gemini brain, ElevenLabs voice, and anime UI",
+  "private": true,
+  "workspaces": [
+    "apps/web",
+    "apps/server"
+  ],
+  "scripts": {
+    "dev": "concurrently \"npm run dev:server\" \"npm run dev:web\"",
+    "dev:server": "npm run dev --workspace=apps/server",
+    "dev:web": "npm run dev --workspace=apps/web",
+    "build": "npm run build --workspaces",
+    "build:server": "npm run build --workspace=apps/server",
+    "build:web": "npm run build --workspace=apps/web",
+    "start": "npm start --workspace=apps/server"
+  },
+  "keywords": [
+    "ai",
+    "voice-assistant",
+    "gemini",
+    "elevenlabs",
+    "anime-ui"
+  ],
+  "author": "Swaraj Satyam",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
