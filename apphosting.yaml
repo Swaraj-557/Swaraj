@@ -38,3 +38,6 @@ env:
     secret: ELEVENLABS_VOICE_ID
     availability:
       - RUNTIME
+
+# Build configuration
+# https://firebase.google.com/docs/app-hosting/configure#buildpack-configuration
