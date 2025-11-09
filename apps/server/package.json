@@ -1,6 +1,7 @@
 {
   "name": "server",
   "version": "1.0.0",
+  "type": "module",
   "description": "Backend server for Swaraj AI with Gemini and ElevenLabs",
   "main": "dist/index.js",
   "scripts": {

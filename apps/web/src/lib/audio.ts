@@ -116,7 +116,7 @@ export class AudioPlayer {
   private audio: HTMLAudioElement | null = null;
   private analyser: AnalyserNode | null = null;
   private audioContext: AudioContext | null = null;
-  private dataArray: Uint8Array | null = null;
+  private dataArray: Uint8Array<ArrayBuffer> | null = null;
 
   async play(
     audioSrc: string,
