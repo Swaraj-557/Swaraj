@@ -43,9 +43,9 @@ export async function chat(userMessage: string, sessionId: string = 'default'): 
     
     const history = conversationHistory.get(sessionId)!;
     
-    // Initialize model with system instruction
+    // Initialize model with system instruction - Using Gemini 2.5 Flash for best bilingual support
     const model = genAI.getGenerativeModel({
-      model: 'gemini-2.0-flash-exp',
+      model: 'gemini-2.5-flash',
       systemInstruction: SYSTEM_PROMPT,
     });
 
