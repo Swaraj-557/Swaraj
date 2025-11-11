@@ -28,16 +28,6 @@ env:
     secret: GEMINI_API_KEY
     availability:
       - RUNTIME
-  
-  - variable: ELEVENLABS_API_KEY
-    secret: ELEVENLABS_API_KEY
-    availability:
-      - RUNTIME
-  
-  - variable: ELEVENLABS_VOICE_ID
-    secret: ELEVENLABS_VOICE_ID
-    availability:
-      - RUNTIME
 
 # Build configuration
 # https://firebase.google.com/docs/app-hosting/configure#buildpack-configuration

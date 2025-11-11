@@ -1,12 +1,12 @@
 import { Router } from 'express';
-import { generateSpeech, generateSpeechStream } from '../core/azure-tts.js';
+import { generateSpeech, generateSpeechStream } from '../core/google-tts.js';
 
 const router = Router();
 
 // Generate speech and return as base64
 router.post('/', async (req, res) => {
   try {
-    const { text, stream = false, voice, style, rate, pitch } = req.body;
+    const { text, stream = false, voice, languageCode, speakingRate, pitch } = req.body;
 
     if (!text) {
       return res.status(400).json({ error: 'Text is required' });
@@ -14,17 +14,17 @@ router.post('/', async (req, res) => {
 
     const ttsOptions = {
       text,
-      voice: voice || 'en-US-AdamMultilingualNeural',
-      style: style || 'friendly',
-      rate: rate || '0%',
-      pitch: pitch || '0%',
+      voice: voice || 'hi-IN-Neural2-B',
+      languageCode: languageCode || 'hi-IN',
+      speakingRate: speakingRate || 1.0,
+      pitch: pitch || 0,
     };
 
     if (stream) {
-      // Stream audio
-      const audioStream = await generateSpeechStream(ttsOptions);
+      // For Google TTS, we still return the complete audio
+      const audioBuffer = await generateSpeechStream(ttsOptions);
       res.setHeader('Content-Type', 'audio/mpeg');
-      audioStream.pipe(res);
+      res.send(audioBuffer);
     } else {
       // Return base64 audio
       const audioBuffer = await generateSpeech(ttsOptions);

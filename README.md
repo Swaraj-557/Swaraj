@@ -2,11 +2,11 @@
 
 > **"Code. Secure. Create."**
 
-A futuristic voice-based AI assistant powered by **Google Gemini 2.5 Flash** for intelligence, **Azure Speech Services** with Adam Multilingual voice for natural voice synthesis, and featuring an **anime-inspired UI** with real-time animations.
+A futuristic voice-based AI assistant powered by **Google Gemini 2.5 Flash** for intelligence, **Google Cloud Text-to-Speech** with Neural Hindi/English voices for natural bilingual speech synthesis, and featuring an **anime-inspired UI** with real-time animations.
 
 ![Swaraj AI](https://img.shields.io/badge/Swaraj-AI-blue?style=for-the-badge&logo=robot)
 ![Gemini](https://img.shields.io/badge/Google-Gemini_2.5-orange?style=for-the-badge&logo=google)
-![Azure](https://img.shields.io/badge/Azure-Speech-0078D4?style=for-the-badge&logo=microsoft-azure)
+![Google Cloud](https://img.shields.io/badge/Google_Cloud-TTS-4285F4?style=for-the-badge&logo=google-cloud)
 ![React](https://img.shields.io/badge/React-18-61DAFB?style=for-the-badge&logo=react)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?style=for-the-badge&logo=typescript)
 
@@ -16,12 +16,13 @@ A futuristic voice-based AI assistant powered by **Google Gemini 2.5 Flash** for
 
 - 🎙️ **Voice Input** - Speak naturally using Web Speech API
 - 🧠 **Gemini 2.5 Flash** - Latest AI with excellent bilingual (Hindi/English) support
-- 🔊 **Azure Adam Multilingual Voice** - Natural, human-like voice synthesis with multilingual support
+- 🔊 **Google Cloud Neural TTS** - Natural Hindi & English neural voices with automatic language detection
 - 🎨 **Anime UI** - Futuristic design with smooth animations
 - 🛠️ **Agentic Tools** - Open YouTube, play music, get time, save notes, and more
 - 📊 **Real-time Visualization** - Audio waveform during speech
 - 💬 **Conversation History** - Track your chat with Swaraj AI
-- 🌐 **Bilingual Support** - Natural Hinglish conversation style
+- 🌐 **Bilingual Support** - Natural Hinglish conversation style with automatic voice switching
+- 🚀 **Firebase Ready** - No API keys needed for TTS when deployed on Firebase
 
 ---
 
@@ -34,6 +35,7 @@ A futuristic voice-based AI assistant powered by **Google Gemini 2.5 Flash** for
 - "Remember this: buy groceries tomorrow"
 - "Show my notes"
 - "Namaste! Kya haal hai?"
+- "Tell me about yourself in Hinglish"
 
 ---
 
@@ -44,7 +46,7 @@ A futuristic voice-based AI assistant powered by **Google Gemini 2.5 Flash** for
 - **Node.js** 18+ and npm
 - **API Keys**:
   - [Google Gemini API Key](https://makersuite.google.com/app/apikey)
-  - [Azure Speech Services Key](https://portal.azure.com)
+  - Google Cloud TTS (No API key needed when deployed on Firebase!)
 
 ### Installation
 
@@ -70,9 +72,7 @@ NODE_ENV=development
 # Google Gemini API
 GEMINI_API_KEY=your_gemini_api_key_here
 
-# Azure Speech Services
-AZURE_SPEECH_KEY=your_azure_speech_key_here
-AZURE_SPEECH_REGION=eastus
+# Google Cloud TTS (Uses Firebase credentials when deployed)
 
 # Optional: News API
 NEWS_API_KEY=optional_news_api_key_here
