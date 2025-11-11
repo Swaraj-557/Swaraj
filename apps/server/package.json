@@ -2,14 +2,15 @@
   "name": "server",
   "version": "1.0.0",
   "type": "module",
-  "description": "Backend server for Swaraj AI with Gemini and ElevenLabs",
+  "description": "Backend server for Swaraj AI with Gemini and Google Cloud TTS",
   "main": "dist/index.js",
   "scripts": {
     "dev": "tsx watch --env-file=../../.env src/index.ts",
-    "build": "tsc",
+    "build": "npx tsc",
     "start": "node dist/index.js"
   },
   "dependencies": {
+    "@google-cloud/text-to-speech": "^5.2.0",
     "@google/generative-ai": "^0.21.0",
     "cors": "^2.8.5",
     "dotenv": "^16.4.5",
