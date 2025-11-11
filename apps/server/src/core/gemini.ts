@@ -18,8 +18,12 @@ let SYSTEM_PROMPT = '';
 
 try {
   SYSTEM_PROMPT = fs.readFileSync(systemPromptPath, 'utf-8');
+  console.log('✅ System prompt loaded successfully');
+  console.log('📝 Prompt length:', SYSTEM_PROMPT.length, 'characters');
+  console.log('🎯 First 100 chars:', SYSTEM_PROMPT.substring(0, 100));
 } catch (error) {
-  console.warn('Warning: Could not load system-swaraj.txt, using default prompt');
+  console.warn('⚠️ Warning: Could not load system-swaraj.txt, using default prompt');
+  console.error('Error details:', error);
   SYSTEM_PROMPT = `You are Swaraj AI - the digital voice of Swaraj Satyam. You're calm, confident, logical, and creative. Speak naturally in a bilingual style (English/Hinglish). Keep responses concise for voice output.`;
 }
 
@@ -48,6 +52,9 @@ export async function chat(userMessage: string, sessionId: string = 'default'): 
       model: 'gemini-2.5-flash',
       systemInstruction: SYSTEM_PROMPT,
     });
+    
+    console.log('🤖 Gemini model initialized with system instruction');
+    console.log('📊 Session:', sessionId, '| History length:', history.length);
 
     // Build conversation context
     const chatHistory = history.map(msg => ({
