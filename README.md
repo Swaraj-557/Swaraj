@@ -2,11 +2,11 @@
 
 > **"Code. Secure. Create."**
 
-A futuristic voice-based AI assistant powered by **Google Gemini** for intelligence, **ElevenLabs** for natural voice synthesis, and featuring an **anime-inspired UI** with real-time animations.
+A futuristic voice-based AI assistant powered by **Google Gemini 2.5 Flash** for intelligence, **Azure Speech Services** with Adam Multilingual voice for natural voice synthesis, and featuring an **anime-inspired UI** with real-time animations.
 
 ![Swaraj AI](https://img.shields.io/badge/Swaraj-AI-blue?style=for-the-badge&logo=robot)
-![Gemini](https://img.shields.io/badge/Google-Gemini-orange?style=for-the-badge&logo=google)
-![ElevenLabs](https://img.shields.io/badge/ElevenLabs-Voice-purple?style=for-the-badge)
+![Gemini](https://img.shields.io/badge/Google-Gemini_2.5-orange?style=for-the-badge&logo=google)
+![Azure](https://img.shields.io/badge/Azure-Speech-0078D4?style=for-the-badge&logo=microsoft-azure)
 ![React](https://img.shields.io/badge/React-18-61DAFB?style=for-the-badge&logo=react)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?style=for-the-badge&logo=typescript)
 
@@ -15,13 +15,13 @@ A futuristic voice-based AI assistant powered by **Google Gemini** for intellige
 ## ✨ Features
 
 - 🎙️ **Voice Input** - Speak naturally using Web Speech API
-- 🧠 **Gemini AI Brain** - Intelligent responses with context memory
-- 🔊 **ElevenLabs Voice** - Natural, human-like voice synthesis
+- 🧠 **Gemini 2.5 Flash** - Latest AI with excellent bilingual (Hindi/English) support
+- 🔊 **Azure Adam Multilingual Voice** - Natural, human-like voice synthesis with multilingual support
 - 🎨 **Anime UI** - Futuristic design with smooth animations
 - 🛠️ **Agentic Tools** - Open YouTube, play music, get time, save notes, and more
 - 📊 **Real-time Visualization** - Audio waveform during speech
 - 💬 **Conversation History** - Track your chat with Swaraj AI
-- 🌐 **Fully Local** - No external search APIs, runs locally
+- 🌐 **Bilingual Support** - Natural Hinglish conversation style
 
 ---
 
@@ -33,6 +33,7 @@ A futuristic voice-based AI assistant powered by **Google Gemini** for intellige
 - "What time is it?"
 - "Remember this: buy groceries tomorrow"
 - "Show my notes"
+- "Namaste! Kya haal hai?"
 
 ---
 
@@ -43,7 +44,7 @@ A futuristic voice-based AI assistant powered by **Google Gemini** for intellige
 - **Node.js** 18+ and npm
 - **API Keys**:
   - [Google Gemini API Key](https://makersuite.google.com/app/apikey)
-  - [ElevenLabs API Key](https://elevenlabs.io/app/settings)
+  - [Azure Speech Services Key](https://portal.azure.com)
 
 ### Installation
 
@@ -69,9 +70,9 @@ NODE_ENV=development
 # Google Gemini API
 GEMINI_API_KEY=your_gemini_api_key_here
 
-# ElevenLabs API
-ELEVENLABS_API_KEY=your_elevenlabs_api_key_here
-ELEVENLABS_VOICE_ID=your_voice_id_here
+# Azure Speech Services
+AZURE_SPEECH_KEY=your_azure_speech_key_here
+AZURE_SPEECH_REGION=eastus
 
 # Optional: News API
 NEWS_API_KEY=optional_news_api_key_here
